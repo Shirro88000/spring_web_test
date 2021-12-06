@@ -1,19 +1,21 @@
 package com.rshiripov.spring_web_test.mvc;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MyController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String showPage() {
-        return "page";
+        return "Hello";
     }
 
-    @RequestMapping("/test")
+    @GetMapping("/test")
     public String showTestPage() {
-        return "page2";
+        return "Test";
     }
 
 }
